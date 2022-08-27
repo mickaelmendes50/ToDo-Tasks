@@ -34,7 +34,9 @@ public class CreateTask {
         do {
             System.out.println("Opção inválida! Digite 'S' para Sim ou 'N' para Não ");
             option = sc.nextLine();
-        } while (!option.equals("S") && !option.equals("N"));
+            if (option.equals("N"))
+                break;
+        } while (!option.equals("S"));
 
         if (option.equals("S")) {
             System.out.print("Descrição: ");
