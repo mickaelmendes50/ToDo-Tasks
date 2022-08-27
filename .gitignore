@@ -1,2 +1,5 @@
 # ignore compiled itens
 *.class
+
+# ignore idea files
+.idea/*
