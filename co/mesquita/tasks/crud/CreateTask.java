@@ -33,7 +33,7 @@ public class CreateTask {
         System.out.println("Qual a prioridade? (1-5)");
         int priority = sc.nextInt();
 
-        Task task = new Task(name, date, category, priority, TODO);
+        Task task = new Task(name, null, date, category, priority, TODO);
 
         try {
             fu.WriteTasks(task);

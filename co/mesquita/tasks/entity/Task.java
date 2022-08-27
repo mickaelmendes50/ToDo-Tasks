@@ -8,8 +8,9 @@ public class Task {
     private int priority;
     private int status;
 
-    public Task(String name, String date, String category, int priority, int status) {
+    public Task(String name, String description, String date, String category, int priority, int status) {
         this.name = name;
+        this.description = description;
         this.date = date;
         this.category = category;
         this.priority = priority;
