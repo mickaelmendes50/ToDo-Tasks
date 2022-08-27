@@ -14,26 +14,39 @@ public class CreateTask {
         Scanner sc = new Scanner(System.in);
         FileUtils fu = new FileUtils();
 
-        System.out.println("Qual o nome da Tarefa?");
+        System.out.println("------------------------------------------\n" +
+                           "             Criar nova Tarefa            \n" +
+                           "------------------------------------------\n");
+
+        System.out.print("Categoria: ");
+        String category = sc.nextLine();
+
+        System.out.print("Tarefa: ");
         String name = sc.nextLine();
 
-        System.out.println("Defina a data");
+        System.out.print("Data (dd/mm): ");
         String date = sc.nextLine();
 
-        System.out.println("Deseja definir uma categoria? (S/N)");
+        System.out.println("Deseja adicionar uma descrição? (S/N)");
         String option = sc.nextLine();
-        String category;
+
+        String description;
+        do {
+            System.out.println("Opção inválida! Digite 'S' para Sim ou 'N' para Não ");
+            option = sc.nextLine();
+        } while (!option.equals("S") && !option.equals("N"));
+
         if (option.equals("S")) {
-            System.out.print("Categoria: ");
-            category = sc.nextLine();
+            System.out.print("Descrição: ");
+            description = sc.nextLine();
         } else {
-            category = null;
+            description = null;
         }
 
-        System.out.println("Qual a prioridade? (1-5)");
+        System.out.print("Prioridade (1-5): ");
         int priority = sc.nextInt();
 
-        Task task = new Task(name, null, date, category, priority, TODO);
+        Task task = new Task(name, description, date, category, priority, TODO);
 
         try {
             fu.WriteTasks(task);
