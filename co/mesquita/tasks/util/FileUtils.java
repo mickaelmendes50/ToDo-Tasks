@@ -5,9 +5,11 @@ import co.mesquita.tasks.entity.Task;
 import java.io.*;
 import java.util.ArrayList;
 
+import static co.mesquita.tasks.util.Constants.TXT_FILE;
+
 public class FileUtils {
     public void WriteTasks(Task task) throws IOException {
-        FileWriter fw = new FileWriter("res/assets/tasks.txt", true);
+        FileWriter fw = new FileWriter(TXT_FILE, true);
         PrintWriter pw = new PrintWriter(fw);
 
         pw.print(task.getName() + ";" +
@@ -24,7 +26,7 @@ public class FileUtils {
     public ArrayList<Task> ReadTasks() throws IOException {
         ArrayList<Task> tasks = new ArrayList<Task>();
 
-        FileReader fr = new FileReader("res/assets/tasks.txt");
+        FileReader fr = new FileReader(TXT_FILE);
         BufferedReader br = new BufferedReader(fr);
 
         String line = br.readLine();
