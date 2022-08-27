@@ -6,6 +6,8 @@ import co.mesquita.tasks.util.FileUtils;
 import java.io.IOException;
 import java.util.Scanner;
 
+import static co.mesquita.tasks.util.Constants.TODO;
+
 public class CreateTask {
 
     public int CreateTask() {
@@ -31,7 +33,7 @@ public class CreateTask {
         System.out.println("Qual a prioridade? (1-5)");
         int priority = sc.nextInt();
 
-        Task task = new Task(name, date, category, priority);
+        Task task = new Task(name, date, category, priority, TODO);
 
         try {
             fu.WriteTasks(task);

@@ -8,11 +8,12 @@ public class Task {
     private int priority;
     private int status;
 
-    public Task(String name, String date, String category, int priority) {
+    public Task(String name, String date, String category, int priority, int status) {
         this.name = name;
         this.date = date;
         this.category = category;
         this.priority = priority;
+        this.status = status;
     }
 
     public String getName() {
