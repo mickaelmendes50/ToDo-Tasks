@@ -37,7 +37,7 @@ public class FileUtils {
             String date = splitLine[2];
             String category = splitLine[3];
             int priority = Integer.parseInt(splitLine[4]);
-            int status = Integer.parseInt(splitLine[5]);
+            String status = splitLine[5];
 
             Task task = new Task(name, description, date, category, priority, status);
             tasks.add(task);
