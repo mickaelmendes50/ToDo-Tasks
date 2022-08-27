@@ -67,13 +67,10 @@ public class Task {
 
     @Override
     public String toString() {
-        return "Task{" +
-                "name='" + name + '\'' +
-                ", description='" + description + '\'' +
-                ", date='" + date + '\'' +
-                ", category='" + category + '\'' +
-                ", priority=" + priority +
-                ", status=" + status +
-                '}';
+        String string = category + ": " + name + " | " + date + " | " + status + " | Prioridade: " + priority;
+        if (!getDescription().equals("null"))
+            string += "\n * " + description;
+
+        return string;
     }
 }
