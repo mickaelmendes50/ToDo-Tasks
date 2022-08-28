@@ -10,13 +10,26 @@ import java.util.Scanner;
 public class ListTask {
 
     private void listAll(ArrayList<Task> tasks) {
+        System.out.println("--------------------------------------------------------------");
         for (int i = 0; i < tasks.size(); i++) {
             System.out.println(tasks.get(i).toString());
         }
+        System.out.println("--------------------------------------------------------------");
     }
 
-    private void listCategory() {
-
+    private void listCategory(ArrayList<Task> tasks, String category) {
+        int cont = 0;
+        System.out.println("--------------------------------------------------------------");
+        for (int i = 0; i < tasks.size(); i++) {
+            if (tasks.get(i).getCategory().equals(category)) {
+                System.out.println(tasks.get(i).toString());
+                cont++;
+            }
+        }
+        System.out.println("--------------------------------------------------------------");
+        if (cont == 0) {
+            System.out.println("Categoria não encontrada!");
+        }
     }
 
     private void listPriority() {
@@ -41,12 +54,15 @@ public class ListTask {
                            "4. Status\n" +
                            "0. Voltar ao Menu Princial");
         int option = sc.nextInt();
+        sc.nextLine();
         switch (option) {
             case 1:
                 listAll(tasks);
                 break;
             case 2:
-                listCategory();
+                System.out.print("Categoria: ");
+                String category = sc.nextLine();
+                listCategory(tasks, category);
                 break;
             case 3:
                 listPriority();
