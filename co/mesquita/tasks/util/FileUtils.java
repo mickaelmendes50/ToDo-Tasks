@@ -49,4 +49,15 @@ public class FileUtils {
 
         return tasks;
     }
+
+    public void OverrideTasks(ArrayList<Task> tasks) throws IOException {
+        FileWriter fw = new FileWriter(TXT_FILE);
+        PrintWriter pw = new PrintWriter(fw);
+
+        for (int i = 0; i < tasks.size(); i++) {
+            WriteTasks(tasks.get(i));
+        }
+
+        fw.close();
+    }
 }
