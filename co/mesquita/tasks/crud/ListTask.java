@@ -34,8 +34,15 @@ public class ListTask {
         }
     }
 
-    private void listPriority() {
-
+    private void listPriority(ArrayList<Task> tasks) {
+        System.out.println("--------------------------------------------------------------");
+        for (int j = 5; j > 0; j--) {
+            for (int i = 0; i < tasks.size(); i++) {
+                if (tasks.get(i).getPriority() == j)
+                    System.out.println(tasks.get(i).toString());
+            }
+        }
+        System.out.println("--------------------------------------------------------------");
     }
 
     private void listStatus(ArrayList<Task> tasks, String status) {
@@ -77,7 +84,7 @@ public class ListTask {
                 listCategory(tasks, category);
                 break;
             case 3:
-                listPriority();
+                listPriority(tasks);
                 break;
             case 4:
                 System.out.println("------------------------------------------\n" +
