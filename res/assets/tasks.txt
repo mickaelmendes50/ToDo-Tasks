@@ -1,2 +1,6 @@
-Fazer ACZG 28/08'teste novo'1234teste dnv'1245
-mais um teste :D'null'1234'null'5'0
+Fazer atividade de Java;Projeto ZG-Hero;27/08;ACGZ;5;Doing
+Fazer atividade de Groovy;Projeto ZG-Hero;27/08;ACGZ;5;ToDo
+Fazer atividade de JavaScript;null;27/08;ACGZ;5;ToDo
+Fazer atividade de Scrum;Projeto ZG-Hero;27/08;ACGZ;5;Done
+Fazer trabalho de PO;Algoritmo do Simplex;31/09;Faculdade;2;Done
+Fazer tarefa de Redes;Laboratorio;28/08;Faculdade;3;ToDo
