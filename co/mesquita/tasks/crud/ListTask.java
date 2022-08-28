@@ -52,6 +52,10 @@ public class ListTask {
         FileUtils fu = new FileUtils();
         Scanner sc = new Scanner(System.in);
         ArrayList<Task> tasks = fu.ReadTasks();
+        if (tasks.size() == 0) {
+            System.out.println("Não há tarefas cadastradas!");
+            return;
+        }
 
         System.out.println("------------------------------------------\n" +
                            "               Listar Tarefas             \n" +
