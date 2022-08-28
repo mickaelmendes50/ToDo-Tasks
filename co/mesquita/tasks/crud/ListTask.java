@@ -7,6 +7,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import static co.mesquita.tasks.util.Constants.*;
+
 public class ListTask {
 
     private void listAll(ArrayList<Task> tasks) {
@@ -36,8 +38,14 @@ public class ListTask {
 
     }
 
-    private void listStatus() {
-
+    private void listStatus(ArrayList<Task> tasks, String status) {
+        System.out.println("--------------------------------------------------------------");
+        for (int i = 0; i < tasks.size(); i++) {
+            if (tasks.get(i).getStatus().equals(status)) {
+                System.out.println(tasks.get(i).toString());
+            }
+        }
+        System.out.println("--------------------------------------------------------------");
     }
 
     public void ListTasks() throws IOException {
@@ -68,7 +76,17 @@ public class ListTask {
                 listPriority();
                 break;
             case 4:
-                listStatus();
+                System.out.println("------------------------------------------\n" +
+                                   "1. ToDo\n" +
+                                   "2. Doing\n" +
+                                   "3. Done");
+                int status = sc.nextInt();
+                if (status == 1)
+                    listStatus(tasks, TODO);
+                if (status == 2)
+                    listStatus(tasks, DOING);
+                if (status == 3)
+                    listStatus(tasks, DONE);
                 break;
             case 0:
                 return;
