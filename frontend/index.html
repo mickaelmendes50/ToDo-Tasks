@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+    <title>ToDo-Tasks</title>
+</head>
+<body>
+    <h1 id="title">ToDo-Tasks | Sua Lista de Tarefas</h1>
+
+    <div class="buttons">
+        <button type="button" onclick="displayEnable('forms'), displayDisable('list')">Nova Tarefa</button>
+        <button type="button" onclick="displayDisable('forms'), displayEnable('list'), showList()">Listar Tarefas</button>
+    </div>
+
+    <div id="forms">
+        <form id="task-form">
+            <!-- Forms text -->
+            <b><h3 id="return-info"></h3></b><br>
+            <label for="name">Nome da Tarefa</label><br>
+            <input type="text" id="name" name="name"><br>
+            <label for="category">Categoria</label><br>
+            <input type="text" id="category" name="category"><br>
+            <label for="description">Descrição</label><br>
+            <input type="text" id="description" name="description"><br>
+
+            <!-- Forms data -->
+            <label for="date">Data</label><br>
+            <input type="date" id="date" name="date"><br>
+
+            <!-- Forms radio button -->
+            <label for="priority">Prioridade</label><br>
+            <input type="radio" id="priority_1" name="priority" value="1">
+            <label for="priority">1</label>
+            <input type="radio" id="priority_2" name="priority" value="2">
+            <label for="priority">2</label>
+            <input type="radio" id="priority_3" name="priority" value="3">
+            <label for="priority">3</label>
+            <input type="radio" id="priority_4" name="priority" value="4">
+            <label for="priority">4</label>
+            <input type="radio" id="priority_5" name="priority" value="5">
+            <label for="priority">5</label><br>
+
+            <label for="status">Selecione o status</label><br>
+            <select id="status" name="status">
+                <option value="ToDo" selected="selected">ToDo</option>
+                <option value="Doing">Doing</option>
+                <option value="Done">Done</option>
+            </select><br>            
+        </form>
+        <div class="buttons">
+            <button id="submit-button" type="button" onclick="submitForm()">Criar Tarefa</button>
+            <button id="delete-button" type="button" onclick="deleteTask()">Excluir</button>
+        </div>
+    </div>
+
+    <div id="list">
+        <h3>Tarefas </h3>
+        
+    </div>
+
+    <script src='js/Task.js'></script>
+    <script src='js/scripts.js'></script>
+</body>
+</html>

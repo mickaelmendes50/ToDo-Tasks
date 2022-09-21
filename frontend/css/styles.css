@@ -1,0 +1,84 @@
+body {
+    background-color: #f3f3f3;
+}
+
+h1 {
+    margin: 7% 30% 3% 30%;
+    padding: 2%;
+    text-align: center;
+    color: purple;
+    border: 2pt solid purple;
+    border-radius: 20px;
+}
+
+button {
+    background-color: purple; /* Green */
+    border: none;
+    color: white;
+    padding: 20px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 20px;
+}
+
+.buttons {
+    text-align: center;
+}
+
+button:hover {
+    background-color: rgb(170, 57, 170);
+}
+
+input[type=text],input[type=date], select {
+    margin: 7px;
+    border: 2px solid purple;
+    border-radius: 4px;
+    padding: 7px;
+    width: 250px;
+}
+
+input[type=radio] {
+    margin: 10px;
+}
+
+#submit-button, #delete-button {
+    background-color: purple;
+    border: none;
+    color: white;
+    padding: 10px 27px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 20px;
+    margin-top: 3%;
+}
+
+#submit-button:hover, #delete-button:hover {
+    background-color: rgb(170, 57, 170);
+}
+
+#delete-button {
+    display: none;
+}
+
+#forms {
+    margin: 2% 30%;
+    border: 2pt solid purple;
+    border-radius: 15px;
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    display: none;
+}
+
+#list {
+    display: none;
+    align-items: center;
+    border: 2pt solid purple;
+    border-radius: 15px;
+    margin: 2% 5%;
+    padding: 2% 5% 2% 5%;
+}
