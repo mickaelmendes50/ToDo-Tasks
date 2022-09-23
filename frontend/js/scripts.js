@@ -98,6 +98,12 @@ function submitForm() {
 }
 
 function showList() {
+    if (tasks.length == 0) {
+        document.getElementById("header-list").innerHTML = "Nenhuma tarefa cadastrada";
+        return;
+    } else {
+        document.getElementById("header-list").innerHTML = "Tarefas";
+    }
 
     var element_tasks = document.getElementById("tasks");
     if (element_tasks != null) {
