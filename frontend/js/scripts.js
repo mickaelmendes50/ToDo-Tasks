@@ -1,12 +1,4 @@
 const tasks = []
-// Criando tarefas padrão que serão utilizadas como exemplos já que não temos
-// persistencia de dados
-var newTask = new Task("Concluir atividade Frontend", "Usando JS", "22/09", "ACZG", 5, "Doing");
-tasks.push(newTask);
-newTask = new Task("Iniciar trilha de Typescript", null, "30/09", "ACZG", 3, "ToDo");
-tasks.push(newTask);
-newTask = new Task("Finalizar T1", null, "15/10", "ACZG", 5, "Doing");
-tasks.push(newTask);
 
 // Funções para habilitar e desabilitar a visibilidade de um elemento
 function displayEnable(element) {
